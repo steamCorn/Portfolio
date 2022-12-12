@@ -16,7 +16,9 @@ function Home() {
         <Link to={'/timer'} className="item">
           Count Down Timer
         </Link>
-        <div className="item"></div>
+        <Link to={'/quoteMachine'} className="item">
+          Quote Machine
+        </Link>
         <div className="item"></div>
         <div className="item"></div>
       </div>

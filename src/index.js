@@ -17,6 +17,7 @@ import NoPage from './views/NoPage';
 import Calculator from './views/projectsPage/calculator/Calculator';
 import DrumMachine from './views/projectsPage/drumMachine/DrumMachine';
 import Timer from './views/projectsPage/timer/Timer';
+import QuoteBlock from './views/projectsPage/quoteMachine/QuotesBlock';
 
 // const router = createBrowserRouter([
 //   {
@@ -70,7 +71,7 @@ export default function App() {
           <Route path="calculator" element={<Calculator />} />
           <Route path="drumMachine" element={<DrumMachine />} />
           <Route path="timer" element={<Timer />} />
-          <Route path="drumMachine" element={<DrumMachine />} />
+          <Route path="quoteMachine" element={<QuoteBlock />} />
           <Route path="contact" element={<Contact />} />
           <Route path="*" element={<NoPage />} />
         </Route>
