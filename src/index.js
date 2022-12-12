@@ -16,6 +16,7 @@ import NoPage from './views/NoPage';
 // projects :
 import Calculator from './views/projectsPage/calculator/Calculator';
 import DrumMachine from './views/projectsPage/drumMachine/DrumMachine';
+import Timer from './views/projectsPage/timer/Timer';
 
 // const router = createBrowserRouter([
 //   {
@@ -63,8 +64,13 @@ export default function App() {
           <Route index element={<Home />} />
           <Route path="projects" element={<Projects />}>
             <Route path="calculator" element={<Calculator />} />
+            <Route path="drumMachine" element={<DrumMachine />} />
+            <Route path="timer" element={<Timer />} />
           </Route>
           <Route path="calculator" element={<Calculator />} />
+          <Route path="drumMachine" element={<DrumMachine />} />
+          <Route path="timer" element={<Timer />} />
+          <Route path="drumMachine" element={<DrumMachine />} />
           <Route path="contact" element={<Contact />} />
           <Route path="*" element={<NoPage />} />
         </Route>
