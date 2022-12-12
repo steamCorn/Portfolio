@@ -1,0 +1,18 @@
+.home-wrapper {
+  background-color: antiquewhite;
+  margin: 20px 0;
+  width: 100%;
+  gap: 30px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.item {
+  display: block;
+  width: 200px;
+  height: 200px;
+  background-color: blueviolet;
+}

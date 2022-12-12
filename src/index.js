@@ -17,67 +17,68 @@ import NoPage from './views/NoPage';
 import Calculator from './views/projectsPage/calculator/Calculator';
 import DrumMachine from './views/projectsPage/drumMachine/DrumMachine';
 
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <Layout />,
-    errorElement: <NoPage />,
-    children: [
-      {
-        element: <Home />,
-      },
-      {
-        path: 'projects',
-        element: <Projects />,
-        children: [
-          {
-            path: 'calculator',
-            element: <Calculator />,
-          },
-          {
-            path: 'drumMachine',
-            element: <DrumMachine />,
-          },
-        ],
-      },
-      {
-        path: 'contact',
-        element: <Contact />,
-      },
-    ],
-  },
-]);
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <RouterProvider router={router} />
-  </React.StrictMode>,
-);
-
-// export default function App() {
-//   return (
-//     <BrowserRouter>
-//       <Routes>
-//         <Route path="/" element={<Layout />}>
-//           <Route index element={<Home />} />
-//           <Route path="projects" element={<Projects />}>
-//             <Route path="calculator" element={<Calculator />} />
-//           </Route>
-//           <Route path="contact" element={<Contact />} />
-//           <Route path="*" element={<NoPage />} />
-//         </Route>
-//       </Routes>
-//     </BrowserRouter>
-//   );
-// }
+// const router = createBrowserRouter([
+//   {
+//     path: '/',
+//     element: <Layout />,
+//     errorElement: <NoPage />,
+//     children: [
+//       {
+//         element: <Home />,
+//       },
+//       {
+//         path: 'projects',
+//         element: <Projects />,
+//         children: [
+//           {
+//             path: 'calculator',
+//             element: <Calculator />,
+//           },
+//           {
+//             path: 'drumMachine',
+//             element: <DrumMachine />,
+//           },
+//         ],
+//       },
+//       {
+//         path: 'contact',
+//         element: <Contact />,
+//       },
+//     ],
+//   },
+// ]);
 
 // const root = ReactDOM.createRoot(document.getElementById('root'));
 // root.render(
 //   <React.StrictMode>
-//     <App />
+//     <RouterProvider router={router} />
 //   </React.StrictMode>,
 // );
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="projects" element={<Projects />}>
+            <Route path="calculator" element={<Calculator />} />
+          </Route>
+          <Route path="calculator" element={<Calculator />} />
+          <Route path="contact" element={<Contact />} />
+          <Route path="*" element={<NoPage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+);
 
 // https://isotropic.co/react-multiple-pages/
 // https://www.geeksforgeeks.org/how-to-create-a-multi-page-website-using-react-js/
