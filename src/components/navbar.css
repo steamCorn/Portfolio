@@ -1,0 +1,52 @@
+/*  Navbar */
+
+.navbar {
+  display: flex;
+  height: 45px;
+  background-color: var(--background-1-color);
+  font-family: var(--main-font);
+  align-items: center;
+  justify-content: flex-end;
+}
+.wrapper-links {
+  width: 300px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.nav-link {
+  padding: 5px;
+}
+.nav-link > a {
+  color: var(--text-color);
+  background: var(--background-1-color);
+}
+.nav-projects {
+}
+.nav-link:hover,
+.nav-link:focus-within {
+  cursor: pointer;
+  /* background: rgba(255, 0, 0, 0.486); */
+}
+.dropdown {
+  background: orange;
+  /* visibility: hidden; */
+  opacity: 0;
+  /* min-width: 5rem; */
+  /* position: absolute; */
+  transition: all 0.5s ease;
+  /* margin-top: 59px; */
+  /* top: 59px; */
+  /* left: 115px; */
+  display: none;
+}
+.nav-link:hover > .dropdown,
+.nav-link:focus-within > .dropdown,
+.dropdown:hover {
+  visibility: visible;
+  opacity: 1;
+  /* display: block; */
+}
+ul li ul li {
+  clear: both;
+  width: 100%;
+}

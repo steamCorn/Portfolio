@@ -20,46 +20,35 @@
   --secondary-element-color: #4a4b4c;
   --tertiary-element-color: #e8e8e8;
   --tertiary-element-gray-color: #c3c3c3;
-  --background-1-color: #f6f6f6;
+
+  --background-1-color: #442357;
   --background-2-color: #ffffff;
+
   --primary-text-color: #000000;
   --secondary-text-color: #4a4b4c;
+  --text-color: #ffffff;
+
   --hyperlink-text-color: #067bc2;
-  --text-color-white: #ffffff;
 
   --border-radius: 8px;
-  --font-Montserrat: 'Montserrat', sans-serif;
-  --font-OpenSans: 'Open Sans', sans-serif;
+  --main-font: 'Montserrat', sans-serif;
+  --secondary-font: 'Open Sans', sans-serif;
   --transition: 0.5s ease all;
 
   --max-width: 1370px;
 }
 
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: -apple-system, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  margin: 0 auto;
+  max-width: 1100px;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-.App {
+.context {
   text-align: center;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
+.middle-wrapper {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -67,14 +56,5 @@ code {
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  color: var(--text-color);
 }

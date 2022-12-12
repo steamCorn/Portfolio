@@ -6,7 +6,9 @@ function Layout() {
   return (
     <>
       <Navbar />
-      <Outlet />
+      <section className="middle-wrapper">
+        <Outlet />
+      </section>
     </>
   );
 }
