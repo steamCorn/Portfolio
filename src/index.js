@@ -7,13 +7,16 @@ import {
   RouterProvider,
   Routes,
 } from 'react-router-dom';
+
 import './index.css';
-import Home from './views/Home';
+
+import Home from './views/home/Home';
 import Layout from './views/Layout';
 import Projects from './views/projectsPage/Projects';
+import About from './views/About';
 import Contact from './views/Contact';
 import NoPage from './views/NoPage';
-// projects :
+
 import Calculator from './views/projectsPage/calculator/Calculator';
 import DrumMachine from './views/projectsPage/drumMachine/DrumMachine';
 import Timer from './views/projectsPage/timer/Timer';
@@ -26,6 +29,7 @@ import QuoteBlock from './views/projectsPage/quoteMachine/QuotesBlock';
 //     errorElement: <NoPage />,
 //     children: [
 //       {
+//         index: true,
 //         element: <Home />,
 //       },
 //       {
@@ -40,11 +44,23 @@ import QuoteBlock from './views/projectsPage/quoteMachine/QuotesBlock';
 //             path: 'drumMachine',
 //             element: <DrumMachine />,
 //           },
+//           {
+//             path: 'timer',
+//             element: <Timer />,
+//           },
+//           {
+//             path: 'quoteMachine',
+//             element: <QuoteBlock />,
+//           },
 //         ],
 //       },
 //       {
 //         path: 'contact',
 //         element: <Contact />,
+//       },
+//       {
+//         path: 'about',
+//         element: <About />,
 //       },
 //     ],
 //   },
@@ -59,24 +75,27 @@ import QuoteBlock from './views/projectsPage/quoteMachine/QuotesBlock';
 
 export default function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="projects" element={<Projects />}>
-            <Route path="calculator" element={<Calculator />} />
-            <Route path="drumMachine" element={<DrumMachine />} />
-            <Route path="timer" element={<Timer />} />
-          </Route>
-          <Route path="calculator" element={<Calculator />} />
-          <Route path="drumMachine" element={<DrumMachine />} />
-          <Route path="timer" element={<Timer />} />
-          <Route path="quoteMachine" element={<QuoteBlock />} />
-          <Route path="contact" element={<Contact />} />
-          <Route path="*" element={<NoPage />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <div>
+      <div className="bg-style-wrapper"></div>
+      <div className="content-wrapper">
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Layout />}>
+              <Route index element={<Home />} />
+              <Route path="projects" element={<Projects />}>
+                <Route path="calculator" element={<Calculator />} />
+                <Route path="drumMachine" element={<DrumMachine />} />
+                <Route path="timer" element={<Timer />} />
+                <Route path="quoteMachine" element={<QuoteBlock />} />
+              </Route>
+              <Route path="contact" element={<Contact />} />
+              <Route path="about" element={<About />} />
+              <Route path="*" element={<NoPage />} />
+            </Route>
+          </Routes>
+        </BrowserRouter>
+      </div>
+    </div>
   );
 }
 

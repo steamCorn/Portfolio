@@ -1,6 +1,5 @@
 import React from 'react';
 import ColorFile from './ColorFile';
-// import GoBackToPortfolioButton from '../../../__buttons/GoBackToPortfolioButton';
 import './quotesBlock.css';
 import { FaTwitter } from 'react-icons/fa';
 
@@ -58,7 +57,6 @@ class QuotesBlock extends React.Component {
 
     return (
       <div className="pageQuote" style={stylesObj}>
-        {/* <GoBackToPortfolioButton /> */}
         <div className="container-qb">
           <h2 id="title">Start your day with new quote:</h2>
           <div id="quote-box">
@@ -73,7 +71,7 @@ class QuotesBlock extends React.Component {
                 className="one-social-button"
                 href={tweetUrl}
                 title="Tweet this quote!"
-                target="_blank"
+                // target="_blank"
                 style={{ background: this.state.color }}>
                 <span id="twit-icon">
                   <FaTwitter />

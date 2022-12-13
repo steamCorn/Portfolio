@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,600;0,700;1,500&family=Open+Sans:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
 
 * {
   margin: 0;
@@ -8,6 +9,7 @@
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
+  vertical-align: baseline;
 }
 *::after,
 *::before {
@@ -33,6 +35,7 @@
   --border-radius: 8px;
   --main-font: 'Montserrat', sans-serif;
   --secondary-font: 'Open Sans', sans-serif;
+  --menu-font: 'Rubik Mono One', sans-serif;
   --transition: 0.5s ease all;
 
   --max-width: 1370px;
@@ -42,18 +45,61 @@ body {
   font-family: -apple-system, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overscroll-behavior: none;
+  scroll-behavior: smooth;
   margin: 0 auto;
   max-width: 1100px;
+}
+button {
+  background: unset;
+  border: none;
+  cursor: pointer;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+.content-wrapper {
+  min-height: 100vh;
+  width: 100%;
+  padding: 0px 170px;
+  position: relative;
 }
 .context {
   text-align: center;
 }
 .middle-wrapper {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: calc(100vh - 110px);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   color: var(--text-color);
+}
+
+/* Main background style */
+.bg-style-wrapper {
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: #e6e6e6;
+    background: #111;
+  }
+}
+
+@media (max-width: 1250px) {
+  .content-wrapper {
+    padding: 0px 100px;
+  }
+}
+@media (max-width: 648px) {
+  .content-wrapper {
+    min-height: unset;
+    padding: 0px 30px;
+  }
 }

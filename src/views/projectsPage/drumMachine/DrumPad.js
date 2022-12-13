@@ -85,7 +85,7 @@ class DrumPad extends React.Component {
           sound.id === this.state.activeID ? (
             <div
               key={sound.keyCode}
-              className={'drum-pad' + ' ' + 'drum_button_active'}
+              className={`drum-pad drum_button_active`}
               id={sound.id}
               onClick={this.handlerClickButton}>
               <audio className="clip" src={sound.url} id={sound.keyTrigger}>

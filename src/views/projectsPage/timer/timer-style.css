@@ -145,7 +145,6 @@
   .control-panel {
     grid-template-columns: none;
     gap: 1rem;
-    text-align: center;
-    align-items: stretch;
+    justify-items: center;
   }
 }

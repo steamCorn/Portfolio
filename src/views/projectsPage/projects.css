@@ -1,4 +1,4 @@
-.home-wrapper {
+.projects-wrapper {
   background-color: antiquewhite;
   margin: 20px 0;
   width: 100%;
@@ -11,8 +11,11 @@
 }
 
 .item {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 200px;
   height: 200px;
   background-color: blueviolet;
+  border: 10px solid rgb(47, 40, 56);
 }
