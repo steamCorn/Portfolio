@@ -21,6 +21,7 @@ import Calculator from './views/projectsPage/calculator/Calculator';
 import DrumMachine from './views/projectsPage/drumMachine/DrumMachine';
 import Timer from './views/projectsPage/timer/Timer';
 import QuoteBlock from './views/projectsPage/quoteMachine/QuotesBlock';
+import ProjectsLayout from './views/projectsPage/ProjectsLayout';
 
 // const router = createBrowserRouter([
 //   {
@@ -88,6 +89,10 @@ export default function App() {
                 <Route path="timer" element={<Timer />} />
                 <Route path="quoteMachine" element={<QuoteBlock />} />
               </Route>
+              <Route
+                path="projects/:projectName"
+                element={<ProjectsLayout />}
+              />
               <Route path="contact" element={<Contact />} />
               <Route path="about" element={<About />} />
               <Route path="*" element={<NoPage />} />

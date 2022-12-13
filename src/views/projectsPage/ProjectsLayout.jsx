@@ -1,12 +1,11 @@
 import React from 'react';
-import { Outlet } from 'react-router-dom';
+import { Outlet, Link } from 'react-router-dom';
 
 function ProjectsLayout() {
   return (
     <>
       <section className="middle-wrapper">
-        <p>Projects Layout</p>
-        <Outlet />
+        <h1>Projects Layout</h1>
       </section>
     </>
   );

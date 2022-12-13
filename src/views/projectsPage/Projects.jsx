@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, Outlet } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './projects.css';
 
 function Projects() {
@@ -7,7 +7,11 @@ function Projects() {
     <section className="context">
       <h1>Projects page</h1>
       <div className="projects-wrapper">
-        <Link to={'calculator'} className="item">
+        <Link
+          to={'calculator'}
+          className="item"
+          target="_blank"
+          rel="noopener noreferrer">
           Calculator
         </Link>
         <Link to={'drumMachine'} className="item">
@@ -20,7 +24,6 @@ function Projects() {
           Quote Machine
         </Link>
       </div>
-      {/* <Outlet /> */}
     </section>
   );
 }
