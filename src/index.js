@@ -79,7 +79,7 @@ export default function App() {
     <div>
       <div className="bg-style-wrapper"></div>
       <div className="content-wrapper">
-        <BrowserRouter>
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
           <Routes>
             <Route path="/" element={<Layout />}>
               <Route index element={<Home />} />
@@ -88,11 +88,8 @@ export default function App() {
                 <Route path="drumMachine" element={<DrumMachine />} />
                 <Route path="timer" element={<Timer />} />
                 <Route path="quoteMachine" element={<QuoteBlock />} />
+                <Route path=":projectName" element={<ProjectsLayout />} />
               </Route>
-              <Route
-                path="projects/:projectName"
-                element={<ProjectsLayout />}
-              />
               <Route path="contact" element={<Contact />} />
               <Route path="about" element={<About />} />
               <Route path="*" element={<NoPage />} />
